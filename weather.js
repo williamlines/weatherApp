@@ -13,15 +13,16 @@ class Weather {
   }
 
   getWeatherData() {
-    console.log(this.weatherData);
+    return this.weatherData;
   }
 }
 
 const client = new WeatherClient();
 const weather = new Weather(client);
 
-weather.fetch("Madrid");
+// weather.fetch("London");
+// setTimeout(() => {
+//   console.log(weather.getWeatherData());
+// }, 2000);
 
-setTimeout(() => {
-  weather.getWeatherData();
-}, 2000);
+module.exports = Weather;
